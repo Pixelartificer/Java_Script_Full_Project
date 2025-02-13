@@ -1,0 +1,653 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  position: relative;
+  /* overflow: hidden; */
+}
+
+/* Global CSS */
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 60px;
+}
+h3 {
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+  font-weight: 500;
+}
+
+#w_btn {
+  margin-left: 40px;
+  background-color: white;
+  color: #1f4a40;
+  padding: 8px 32px;
+  font-size: 16px;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+}
+
+#g_btn {
+  text-decoration: none;
+  background-color: #51a995;
+  color: white;
+  padding: 8px 32px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.sec-space {
+  padding: 4rem 0;
+}
+.extra-space {
+  padding-top: 8rem;
+}
+.obj-width {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Nav Bar Style */
+
+header {
+  background-color: #1f4a40;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+#navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+#navBar .logo {
+  width: 150px;
+}
+
+#menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+#menu li a {
+  color: white;
+  text-decoration: none;
+  margin-left: 40px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#bar {
+  color: white;
+  display: none;
+}
+
+/* Hero */
+
+.hero {
+  background-color: #1f4a40;
+}
+
+.hero_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.h_left {
+  width: 45%;
+  color: white;
+}
+
+.h_left p {
+  padding: 24px 0;
+}
+
+.search {
+  position: relative;
+}
+
+.search input {
+  width: 100%;
+  height: 48px;
+  padding: 0 20px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  border-radius: 36px;
+  -webkit-border-radius: 36px;
+  -moz-border-radius: 36px;
+  -ms-border-radius: 36px;
+  -o-border-radius: 36px;
+}
+
+.search a {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+
+.h_right {
+  width: 50%;
+}
+
+.h_right img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.features .fe_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.features .fe_box div {
+  width: 200px;
+}
+
+.features .fe_box img {
+  width: 50px;
+  margin: 48px 0 24px 0;
+}
+
+/* Job Listing  Section */
+
+.jobs .job_id {
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.1);
+}
+
+.jobs .job_id li {
+  padding: 20px 40px;
+  cursor: pointer;
+  color: black;
+}
+
+.jobs .job_id li.active {
+  background-color: #51a995;
+  color: white;
+}
+
+.jobs .jList {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid #ccc;
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
+  padding: 32px 32px;
+}
+
+.jobs .jList h3 {
+  padding-bottom: 0;
+}
+
+.jobs .jList:hover {
+  background-color: #ecf1ee;
+}
+
+.jobs .jList img {
+  width: 40px;
+}
+
+.jobs .jList.delete {
+  display: none;
+}
+
+.jobs form {
+  margin-top: 48px;
+  width: 100%;
+  border: 1px solid #51a995;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.jobs form i {
+  padding-left: 16px;
+  font-size: 32px;
+  font-weight: 500;
+  color: #545756;
+}
+
+.jobs form input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 16px 8px;
+  font-size: 18px;
+}
+
+/* Job Details Page*/
+
+.jobHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8fcfa;
+  border: 1px solid #51a995;
+  padding: 32px;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+}
+
+.jobHeader img {
+  width: 100px;
+  background-color: white;
+  padding: 16px;
+  margin-right: 32px;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+
+.jobImgRow {
+  display: flex;
+  align-items: center;
+}
+
+.jobDescription p {
+  padding-bottom: 32px;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Trust */
+
+.trust .t_box {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 48px;
+}
+
+.trust .t_box img {
+  margin: 16px 16px 16px 0;
+}
+
+/* Team */
+
+.teamContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.teamContainer .f1Box {
+  border: 1px solid #c1e1d9;
+  width: 280px;
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 48px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.skill {
+  padding-bottom: 48px;
+}
+
+.f1Box img {
+  margin-bottom: 16px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+#key {
+  font-size: 12px;
+  background-color: #edcfee;
+  padding: 12px 20px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+/* Footer */
+
+footer {
+  background-color: #1f4a40;
+  color: white;
+  padding: 56px 0;
+}
+
+.top {
+  display: flex;
+  align-content: center;
+  text-align: start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.top .logo {
+  width: 170px;
+  margin-bottom: 16px;
+}
+
+.top i {
+  color: white;
+  font-size: 32px;
+  margin-left: 8px;
+}
+
+.bottom {
+  padding-top: 32px;
+  display: flex;
+  text-align: start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bottom div {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom a {
+  text-decoration: none;
+  color: white;
+  line-height: 36px;
+  font-size: 18px;
+}
+
+/* Contact */
+
+.contact {
+  display: flex;
+  align-items: center;
+}
+
+.contactImage {
+  width: 50%;
+}
+
+.contactImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact form {
+  max-width: 400px;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  margin: 8px 0 16px 0;
+  border: 1px solid #51a995;
+  box-shadow: none;
+  outline: none;
+  padding: 12px 8px;
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+
+/* NavBar */
+
+@media (max-width: 699px) {
+  #menu {
+    background-color: white;
+    display: block;
+    width: 280px;
+    height: auto;
+    position: absolute;
+    top: 80px;
+    right: -100%;
+    padding: 32px 0;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+  }
+
+  #bar {
+    display: block;
+    font-size: 32px;
+    cursor: pointer;
+  }
+
+  #menu.active {
+    right: 12px;
+    opacity: 1;
+  }
+
+  #menu li {
+    padding: 16px;
+  }
+
+  #menu li a {
+    color: #1f4a40;
+  }
+
+  #w_btn {
+    margin: 20px 0 0 50px;
+    background-color: #1f4a40;
+    color: white;
+  }
+
+  /* Hero Section */
+
+  .hero_box {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: center;
+    height: aito;
+    padding: 120px 0;
+  }
+  .h_left {
+    width: 100%;
+  }
+  .h_right {
+    display: none;
+  }
+
+  /* Features  Section */
+
+  .features .fe_box div {
+    width: 40%;
+  }
+
+  /* Job Listing  Section */
+
+  .jobs .job_id {
+    position: relative;
+    width: 100%;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .jobs .job_id li {
+    padding: 20px 32px;
+    /* text-wrap- nowrap; */
+    white-space: nowrap;
+  }
+
+  .jobs_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    justify-items: center;
+  }
+
+  .jobs .jList {
+    width: 48%;
+    margin-top: 16px;
+    grid-template-columns: repeat(1, 1fa);
+    grid-gap: 16px;
+    padding: 32px 16px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Team  Section */
+  .teamContainer .f1Box {
+    width: 48%;
+    margin-top: 16px;
+    text-align: center;
+    border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+  }
+
+  .skill {
+    padding-bottom: 16px;
+  }
+
+  /* Footer  Section */
+
+  .top i {
+    margin-left: 16px 16px 0 0;
+  }
+
+  .bottom div {
+    width: 50%;
+    margin-bottom: 48px;
+  }
+
+  .jobHeader {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 16px;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+  }
+
+  .jobImgRow {
+    margin-bottom: 24px;
+  }
+
+  .jobHeader img {
+    padding: 0px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+  }
+
+
+
+  /* contact */
+  .contact{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+.contactImage{
+  width: 100%;
+}
+
+.contactImage img{
+  width: 70%;
+  height: auto;
+}
+
+}

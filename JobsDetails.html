@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Project</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./CSS/style.css">
+
+
+</head>
+
+<body>
+
+    <!-- Header  Section-->
+    <header>
+        <div id="navBar" class="obj-width">
+            <a href="index.html">
+                <img class="logo" src="./images/logo.png" alt="./images/logo.png">
+            </a>
+
+            <ul id="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./Jobs.html">Brows Jobs</a></li>
+                <li><a href="./Conact.html">Contact Us</a></li>
+                <button id="w_btn">Join</button>
+            </ul>
+            <i id="bar" class='bx bx-menu'></i>
+        </div>
+    </header>
+
+
+
+
+
+    <!-- Job Details-->
+
+    <div id="jobDetails" class="extra-space obj-width">
+           </div>
+
+    <!-- Footer  Section-->
+
+    <footer class="fooer">
+        <div class="obj-width">
+            <div class="top">
+                <div>
+                    <img class="logo" src="./images/logo.png" alt="./images/logo.png">
+                    <p>Search your desiered jobs.</p>
+                </div>
+                <div>
+                    <a href="#"><i class='bx bxl-facebook-square'></i></a>
+                    <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="#"><i class='bx bxl-behance'></i></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></i></a>
+                </div>
+            </div>
+
+            <div class="bottom">
+                <div>
+                    <h3>Project</h3>
+                    <a href="#">Changelog</a>
+                    <a href="#">Status</a>
+                    <a href="#">License</a>
+                    <a href="#">All Vesions</a>
+                </div>
+
+                <div>
+                    <h3>Community</h3>
+                    <a href="#">GitHub</a>
+                    <a href="#">Issues</a>
+                    <a href="#">Project</a>
+                    <a href="#">Twitter</a>
+                </div>
+
+                <div>
+                    <h3>Help</h3>
+                    <a href="#">Support</a>
+                    <a href="#">Troubleshooting</a>
+                    <a href="#">Contact Us</a>
+                </div>
+
+                <div>
+                    <h3>Other</h3>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">License</a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+            const urlParm =new URLSearchParams(window.location.search);
+            const index =urlParm.get("id")
+
+            const selectJob = jCatagory[index]
+
+          const  jobDetailsContainer = document.getElementById("jobDetails")
+
+          jobDetailsContainer.innerHTML = `<div class="jobHeader">
+            <div class="jobImgRow">
+                <img src="${selectJob.image}" alt="${selectJob.image}">
+                <div>
+                    <h2>${selectJob.companyName}</h2>
+                    <span>${selectJob.location}</span>
+                </div>
+            </div>
+            <a id="g_btn" href="#">Apply Now</a>
+        </div>
+
+    <div class="features obj-width">
+      
+
+        <div class="fe_box">
+            <div class="image">
+                <img src="./images/vacancy.png" alt="./images/fe01.png">
+                <h3>Vacancy</h3>
+                <p>${selectJob.vaccancy}</p>
+            </div>
+
+            <div class="image">
+                <img src="./images/fe01.png" alt="./images/fe01.png">
+                <h3>Position</h3>
+                <p>${selectJob.title}</p>
+            </div>
+
+            <div class="image">
+                <img src="./images/hour.png" alt="./images/hour.png">
+                <h3>Hour</h3>
+                <p>${selectJob.hours}</p>
+            </div>
+
+            <div class="image">
+                <img src="./images/salary.png" alt="./images/salary.png">
+                <h3>Salary</h3>
+                <p>${selectJob.rate}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="jobDescription sec-space obj-width">
+        <h3>Job Description</h3>
+        <p>${selectJob.description}</p>
+
+        <h3>Employment Status</h3>
+        <p>- ${selectJob.av}</p>
+
+        <h3>Workplace</h3>
+        <p>- ${selectJob.workplace}</p>
+
+        <h3>Education Requirements</h3>
+        <p>- ${selectJob.education}</p>
+
+        <h3>Experience Requirements</h3>
+        <p>- ${selectJob.experience}</p>
+
+    </div>`
+                })
+    </script>
+
+
+    <script src="./js/toggle.js"></script>
+    <script src="./js/jobList.js"></script>
+    <script src="./js/jobSearch.js"></script>
+</body>
+
+</html>
